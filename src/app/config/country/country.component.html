@@ -1,0 +1,41 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile">Country</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="Country_Code" class="col-md-3 col-xl-2 col-form-label">Country Code</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="Country_Code">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Country_Name" class="col-md-3 col-xl-2 col-form-label">Country Name</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="Country_Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="Status" class="col-md-3 col-xl-2 col-form-label">Status</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="Status">
+              </div>
+            </div>
+
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)=" btnSave()" class="btn tb-color-thead btn-submit">Save</button>
+            <button type="submit" class="btn btn-checked-out btn-submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

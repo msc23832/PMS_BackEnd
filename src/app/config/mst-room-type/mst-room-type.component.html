@@ -1,0 +1,120 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile" *ngIf="mode === 'EDIT'">Master RoomType : {{ roomTypeName }}</label>
+        <label class="Tile" *ngIf="mode === 'ADD'">Master RoomType</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="roomTypeCode" class="col-md-3 col-xl-2 col-form-label">Code</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomTypeCode" name="roomTypeCode" [(ngModel)]="roomTypeCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomTypeName" class="col-md-3 col-xl-2 col-form-label">Name</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomTypeName" name="roomTypeName" [(ngModel)]="roomTypeName" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomTypeSeq" class="col-md-3 col-xl-2 col-form-label">Sequence</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomTypeSeq" name="roomTypeSeq" [(ngModel)]="roomTypeSeq" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomTypeDesc" class="col-md-3 col-xl-2 col-form-label">Description</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomTypeDesc" name="roomTypeDesc" [(ngModel)]="roomTypeDesc">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomTypeClass" class="col-md-3 col-xl-2 col-form-label">RoomTypeClass</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomTypeClass" name="roomTypeClass" class="form-control" [(ngModel)]="roomTypeClass" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let roomclass of _dataroomclass" value="{{ roomclass.code_roomclass }}">{{ roomclass.name_roomclass }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomTypeGroup" class="col-md-3 col-xl-2 col-form-label">RoomTypeGroup</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomTypeGroup" name="roomTypeGroup" class="form-control" [(ngModel)]="roomTypeGroup" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let roomtypegroup of _dataroomtypegroup" value="{{ roomtypegroup.code_roomtypegroup }}">{{ roomtypegroup.name_roomtypegroup }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_no_guest" class="col-md-3 col-xl-2 col-form-label">Def_No_Guest</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_no_guest" name="def_no_guest" [(ngModel)]="def_no_guest">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_occ" class="col-md-3 col-xl-2 col-form-label">Def_Occ</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_occ" name="def_occ" [(ngModel)]="def_occ">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_min_adult" class="col-md-3 col-xl-2 col-form-label">Def_Min_Adult</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_min_adult" name="def_min_adult" [(ngModel)]="def_min_adult">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_max_adult" class="col-md-3 col-xl-2 col-form-label">Def_Max_Adult</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_max_adult" name="def_max_adult" [(ngModel)]="def_max_adult">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_min_child" class="col-md-3 col-xl-2 col-form-label">Def_Min_Child</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_min_child" name="def_min_child" [(ngModel)]="def_min_child">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_max_child" class="col-md-3 col-xl-2 col-form-label">Def_Max_Child</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_max_child" name="def_max_child" [(ngModel)]="def_max_child">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_bed_addable" class="col-md-3 col-xl-2 col-form-label">Def_Bed_Addable</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_bed_addable" name="def_bed_addable" [(ngModel)]="def_bed_addable">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="def_bedtype" class="col-md-3 col-xl-2 col-form-label">Def_BedType</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="def_bedtype" name="def_bedtype" [(ngModel)]="def_bedtype">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="max_no_bed" class="col-md-3 col-xl-2 col-form-label">Max_No_Bed</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="max_no_bed" name="max_no_bed" [(ngModel)]="max_no_bed">
+              </div>
+            </div>
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)="btnSave()" class="btn btn-add">Save</button>
+            <!-- <button type="submit" class="btn btn-checked-out col col-md-2 col-xl-1">Delete</button> -->
+            <button type="button" (click)="btnCancel()" class="btn btn-delete">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

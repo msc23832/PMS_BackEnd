@@ -1,0 +1,36 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile">Master RoomFeatures</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="roomfeatureCode" class="col-md-3 col-xl-2 col-form-label">Code</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomfeatureCode" name="roomfeatureCode" [(ngModel)]="roomfeatureCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomfeatureName" class="col-md-3 col-xl-2 col-form-label">Name</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomfeatureName" name="roomfeatureName" [(ngModel)]="roomfeatureName" required>
+              </div>
+            </div>
+
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)="btnSave()" class="btn btn-add">Save</button>
+            <!-- <button type="submit" class="btn btn-checked-out col col-md-2 col-xl-1">Delete</button> -->
+            <button type="button" (click)="btnCancel()" class="btn btn-delete">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

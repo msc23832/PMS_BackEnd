@@ -1,0 +1,131 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile" *ngIf="mode === 'EDIT'">Master Room : {{ roomName }}</label>
+        <label class="Tile" *ngIf="mode === 'ADD'">Master Room</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="roomCode" class="col-md-3 col-xl-2 col-form-label">Code</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomCode" name="roomCode" [(ngModel)]="roomCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomName" class="col-md-3 col-xl-2 col-form-label">Room</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomName" name="roomName" [(ngModel)]="roomName" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomProp" class="col-md-3 col-xl-2 col-form-label">Property</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomProp" name="roomProp" class="form-control" [(ngModel)]="roomProp" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let prop of _dataproperty" value="{{ prop.code_property }}">{{ prop.name_property }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomFloor" class="col-md-3 col-xl-2 col-form-label">Floor</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomFloor" name="roomFloor" class="form-control" [(ngModel)]="roomFloor" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let floor of _datafloor" value="{{ floor.code_floor }}">{{ floor.name_floor }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomRoomType" class="col-md-3 col-xl-2 col-form-label">RoomType</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomRoomType" name="roomRoomType" class="form-control" [(ngModel)]="roomRoomType" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let roomtype of _dataroomtype" value="{{ roomtype.code_roomtype }}">{{ roomtype.name_roomtype }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomDesc" class="col-md-3 col-xl-2 col-form-label">Description</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomDesc" name="roomDesc" [(ngModel)]="roomDesc">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomFeature" class="col-md-3 col-xl-2 col-form-label">Feature</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomFeature" name="roomFeature" class="form-control" [(ngModel)]="roomFeature" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let feature of _datafeature" value="{{ feature.code_roomfeature }}">{{ feature.name_roomfeature }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomZone" class="col-md-3 col-xl-2 col-form-label">Zone</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomZone" name="roomZone" class="form-control" [(ngModel)]="roomZone" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let zone of _datazone" value="{{ zone.code_roomzone }}">{{ zone.name_roomzone }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomWing" class="col-md-3 col-xl-2 col-form-label">Wing</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomWing" name="roomWing" class="form-control" [(ngModel)]="roomWing" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let wing of _datawing" value="{{ wing.code_wing }}">{{ wing.name_wing }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomExposure" class="col-md-3 col-xl-2 col-form-label">Exposure</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomExposure" name="roomExposure" class="form-control" [(ngModel)]="roomExposure" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let exposure of _dataexposure" value="{{ exposure.code_exposure }}">{{ exposure.name_exposure }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomBuilding" class="col-md-3 col-xl-2 col-form-label">Building</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="roomBuilding" name="roomBuilding" class="form-control" [(ngModel)]="roomBuilding" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let building of _databuilding" value="{{ building.code_building }}">{{ building.name_building }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="roomImg" class="col-md-3 col-xl-2 col-form-label">ImageCatalog</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="roomImg" name="roomImg" [(ngModel)]="roomImg">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="active" class="col-md-3 col-xl-2 col-form-label">Active</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <label class="custom-control custom-checkbox">
+                  <input [(ngModel)]="active" type="checkbox" class="custom-control-input" id="Active" name="Active" checked>
+                  <span class="custom-control-indicator"></span>
+                  <!-- <span class="custom-control-description">Fixed Rate</span> -->
+                </label>
+              </div>
+            </div>
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)="btnSave()" class="btn btn-add">Save</button>
+            <!-- <button type="submit" class="btn btn-checked-out col col-md-2 col-xl-1">Delete</button> -->
+            <button type="button" (click)="btnCancel()" class="btn btn-delete">Cancel</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

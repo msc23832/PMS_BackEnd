@@ -1,0 +1,48 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="col">
+    <label class="Tile">City List</label>
+  </div>
+  <br>
+  <div class="col table-responsive">
+    <table class="table table-sm table-hover">
+      <thead>
+        <tr>
+          <th scope="col">City Code</th>
+          <th scope="col">Country Name</th>
+          <th scope="col">Column</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>Otto</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <form class="form-inline">
+        <button type="submit" (click)="btnAdd()" class="btn tb-color-thead ml-auto col col-md-2 col-xl-1">Add</button>
+      </form>
+  </div>

@@ -1,0 +1,4 @@
+1. import httpmodule > app.module.ts
+3. create service (ng g service name)
+4. import service > providers and contructor
+5. install cors > in api for use allow access

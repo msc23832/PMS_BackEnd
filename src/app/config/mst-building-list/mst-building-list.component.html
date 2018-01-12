@@ -1,0 +1,95 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <!-- Left -->
+  <div class="col-12">
+    <!-- Search -->
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile">Master Building</label>
+        <br>
+        <label class="Sub-Tile">{{ date }}</label>
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Name</th>
+              <th scope="col">Property</th>
+              <th scope="col">Wing</th>
+              <th scope="col">Description</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of _data">
+              <td>{{data.code_building}}</td>
+              <td>{{data.name_building}}</td>
+              <td>{{data.name_property}}</td>
+              <td>{{data.name_wing}}</td>
+              <td>{{data.desc_building}}</td>
+              <td>
+                <a (click)="btnEdit(data.id_building);">
+                  <i class="oi oi-pencil"> </i>
+                </a>
+                <a (click)="sendDelete(data.id_building);" data-toggle="modal" data-target="#ModelDel" >
+                  <span class="oi oi-trash text-danger"></span>
+                </a>
+              </td>
+
+              
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom justify-content-end">
+  <a (click)="btnAdd()" [class.disabled]="disbtnAdd == true ? true : false" class="button button-circle button-flat-caution ">
+    <span class="oi oi-plus icon-white"></span>
+  </a>
+</nav>
+
+
+<div class="modal fade" id="ModelDel" tabindex="-1" role="dialog" aria-labelledby="ModelDelLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-margin-top modal-dialog-alert" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-alert">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        <div class="container">
+        <div class="row" >
+        <div class="col-sm-12 modal-header-imgcenter">
+          <img src="../../assets/image/icon_delete.png"/>
+        </div></div>
+        <div class="" >
+        <div class="col-sm-12 text-center">
+            <span class="text-center font-alert">Are you Sure?</span>
+        </div> </div></div>
+      </div>
+      <div class="modal-body modal-body-padding">
+          <div class="col-sm-12 text-center">
+              <span class="text-center">Do you want to Delete this item?</span>
+          </div>
+      </div>
+      <div class="modal-footer modal-footer-alert">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-6 text-right">
+                  <button type="button" (click)="btnDelete(DeleteID);" class="btn btn-danger col btn-sm" data-dismiss="modal">Delete</button>
+              </div>
+              <div class="col-sm-6">
+                  <button type="button" class="btn btn-secondary col btn-sm" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

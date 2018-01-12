@@ -1,0 +1,116 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<form #PropertyForm="ngForm">
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile" *ngIf="mode === 'EDIT'">Property : {{ propName }}</label>
+        <label class="Tile" *ngIf="mode === 'ADD'">Property</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="PropCode" class="col-md-3 col-xl-2 col-form-label">Code</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" placeholder="Enter Property Code" id="PropCode" name="PropCode" [(ngModel)]="propCode" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropName" class="col-md-3 col-xl-2 col-form-label">Name</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" placeholder="Enter Property Name" id="PropName" name="PropName" [(ngModel)]="propName" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropBrand" class="col-md-3 col-xl-2 col-form-label">Brand</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="PropBrand" name="PropBrand" class="form-control" [(ngModel)]="propBrand" required>
+                  <option disabled selected [ngValue]="">Choose...</option>
+                  <option *ngFor="let brand of _databrand" [ngValue]="brand.code_brand">{{ brand.name_brand }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropAddress1" class="col-md-3 col-xl-2 col-form-label">Address 1</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <textarea class="form-control" id="PropAddress1" name="PropAddress1" placeholder="Enter Address 1" rows="4" style="resize:none"
+                  [(ngModel)]="propAddress1"></textarea>
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows=""></textarea> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropAddress2" class="col-md-3 col-xl-2 col-form-label">Address 2</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <textarea class="form-control" id="PropAddress2" name="PropAddress2" placeholder="Enter Address 2" rows="4" style="resize:none"
+                  [(ngModel)]="propAddress2"></textarea>
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropAddress3" class="col-md-3 col-xl-2 col-form-label">Address 3</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <textarea class="form-control" id="PropAddress3" name="PropAddress3" placeholder="Enter Address 3" rows="4" style="resize:none"
+                  [(ngModel)]="propAddress3"></textarea>
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> -->
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropActivatedKey" class="col-md-3 col-xl-2 col-form-label">Activated Key</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="PropActivatedKey" name="PropActivatedKey" [(ngModel)]="propActivatedkey" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropCity" class="col-md-3 col-xl-2 col-form-label">City</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="PropCity" name="PropCity" class="form-control" [(ngModel)]="propCity" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let city of _datacity" value="{{ city.code_city }}">{{ city.name_city }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropCityCountry" class="col-md-3 col-xl-2 col-form-label">City Country </label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="PropCityCountry" name="PropCityCountry" class="form-control" [(ngModel)]="propCityCountry" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let country of _datacountry" value="{{ country.code_country }}">{{ country.name_country }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropCountry" class="col-md-3 col-xl-2 col-form-label">Country</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="PropCountry" name="PropCountry" class="form-control" [(ngModel)]="propCountry" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let country of _datacountry" value="{{ country.code_country }}">{{ country.name_country }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropPostcode" class="col-md-3 col-xl-2 col-form-label">Postcode</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="text" class="form-control" id="PropPostcode" name="PropPostcode" [(ngModel)]="propPostcode">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="PropNoRooms" class="col-md-3 col-xl-2 col-form-label">No_Rooms</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <input type="number" class="form-control" id="PropNoRooms" name="PropNoRooms" [(ngModel)]="propNorooms" required>
+              </div>
+            </div>
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)="btnSave()" class="btn btn-add">Save</button>
+            <button type="button" (click)="btnCancel()" class="btn btn-delete">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

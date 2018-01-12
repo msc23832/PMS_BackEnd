@@ -1,0 +1,1066 @@
+
+<div class="col">
+    <label class="Tile">Reservation</label>
+    <br>
+    <label class="Sub-Tile">15 December 2017 | 18.00 น.</label>
+  </div>
+  <div class="row">
+    <!-- Left -->
+    <div class="col-12 col-sm col-md-12 col-lg col-xl-4 pd">
+      <div class="col">
+        <!-- Search -->
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Search</h4>
+            <div class="row">
+              <label class="col-sm-3">Name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="Johny">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">First Name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">Room</label>
+              <div class="col-sm-4">
+                <select id="inputState" class="form-control">
+                  <option></option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-2">
+                <label>Type</label>
+              </div>
+              <div class="col-12 col-sm-3">
+                <select id="inputState" class="form-control">
+                  <option></option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">ConfifiCxl No.</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">Stay On</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">Company</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">Agent</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="" value="">
+              </div>
+            </div>
+            <div class="row">
+              <label class="col-sm-3">Block Code</label>
+              <div class="col-sm-9">
+                <select id="inputState" class="form-control">
+                  <option></option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+            <!-- <br> -->
+            <button type="button" class="btn btn-bule offset-2 col-4">Search</button>
+            <button type="button" class="btn btn-gray col-4">Clear</button>
+            <p></p>
+            <!-- Table -->
+            <table class="table table-sm table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">
+                      <div class="dropdown">
+                        <button class="btn btn-white th dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          NAME
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">...</a>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <div class="dropdown">
+                        <button class="btn btn-white th dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          ROOM
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">...</a>
+                        </div>
+                      </div>
+                    </th>
+                    <th scope="col">
+                      <button class="btn btn-white th" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        STATUS
+                      </button>
+                    </th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <!-- <tbody *ngFor="let item of data">
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>{{item.name}}</td>
+                    <td>&nbsp;&nbsp;{{item.room}}</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-block">{{item.status}}</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                </tbody> -->
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Hummmonds, Johny</td>
+                    <td>&nbsp;&nbsp;05002</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-out btn-block">checked out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Antiel, Rob</td>
+                    <td>&nbsp;&nbsp;01265</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-due-out btn-block">due out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Damn, Saimond</td>
+                    <td>&nbsp;&nbsp;08525</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-due-out btn-block">due out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Franciscy G, Gergo</td>
+                    <td>&nbsp;&nbsp;04585</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-in btn-block">checked in</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Eben, Andrew</td>
+                    <td>&nbsp;&nbsp;05322</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-out btn-block">checked out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Bariga, Istan</td>
+                    <td>&nbsp;&nbsp;03225</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-due-out btn-block">due out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Acknann, Jereny</td>
+                    <td>&nbsp;&nbsp;05142</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-out btn-block">checked out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Hal, Martin</td>
+                    <td>&nbsp;&nbsp;05847</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-due-out btn-block">due out</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Eben, Andrew</td>
+                    <td>&nbsp;&nbsp;04524</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-in btn-block">checked in</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <input type="checkbox" value="">
+                    </th>
+                    <td>Anitek, Rob</td>
+                    <td>&nbsp;&nbsp;05145</td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-checked-in btn-block">checked in</button>
+                    </td>
+                    <td>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="col-12 col-sm col-md-12 col-lg col-xl pd">
+      <div class="col">
+        <!-- Reservation -->
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Reservation</h4>
+            <div class="row">
+              <!-- -->
+              <div class="col-sm-12 col-md col-xl">
+                <div class="row">
+                  <label class="col-sm-3">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="Johny ,Rob">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Address</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="Europadarm 4">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Building</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">City</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="Neuss">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-5">Zipcode/State/Country</label>
+                  <div class="col-sm-7">
+                    <div class="form-row">
+                      <div class="col-5">
+                        <input type="text" class="form-control" placeholder="" value="41403">
+                      </div>
+                      <div class="col">
+                        <select id="inputState" class="form-control">
+                          <option selected>NW</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select id="inputState" class="form-control">
+                          <option selected>DE</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Comm</label>
+                  <div class="col-sm-9">
+                    <div class="form-row">
+                      <div class="col-6">
+                        <select id="inputState" class="form-control">
+                          <option selected>MOBILE</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" class="form-control" placeholder="" value="+68 6552 9685">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Comm</label>
+                  <div class="col-sm-9">
+                    <div class="form-row">
+                      <div class="col-6">
+                        <select id="inputState" class="form-control">
+                          <option selected>EMAIL</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="col-6">
+                        <input type="text" class="form-control" placeholder="" value="john@micro.co.de">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- -->
+              <div class="col-sm col-md-12 col-xl">
+                <div class="row">
+                  <label class="col-sm-3">Arrival</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="07/12/2017">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Night</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="5">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Departure</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="12/12/2017">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Rate</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="5">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Rate Code</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="0505">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Block code</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" value="1509APG">
+                  </div>
+                </div>
+                    <button type="button" class="btn btn-bule offset-sm-4 col-sm-6">Change Reservation</button>
+                
+                
+              </div>
+            </div>
+            <!-- -->
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <!-- Calendar -->
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div class="card">
+              <div class="card-body ">
+                <h4 class="card-title">Calendar</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Calendar</h6>
+                <div style="width:100%; max-width:600px; display:inline-block;">
+                    <div class="monthly monthly-locale-en monthly-locale-en-us" id="mycalendar">
+                        <!-- <div class="monthly-header">
+                            <div class="monthly-header-title"><a href="#" class="monthly-header-title-date" onclick="return false">Nov 2017</a></div>
+                            <a href="#" class="monthly-prev"></a>
+                            <a
+                                href="#" class="monthly-next"></a>
+                        </div>
+                        <div class="monthly-day-title-wrap">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="monthly-day-wrap">
+                            <div class="monthly-week">
+                                <div class="m-d monthly-day-blank">
+                                    <div class="monthly-day-number"></div>
+                                </div>
+                                <div class="m-d monthly-day-blank">
+                                    <div class="monthly-day-number"></div>
+                                </div>
+                                <div class="m-d monthly-day-blank">
+                                    <div class="monthly-day-number"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="1">
+                                    <div class="monthly-day-number">1</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="2">
+                                    <div class="monthly-day-number">2</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="1" title="XML Events" style="background:#ffb128;color:#ffb128" class="monthly-event-indicator"><span>XML Events</span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="3">
+                                    <div class="monthly-day-number">3</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="1" title="XML Events" style="background:#ffb128;color:#ffb128" class="monthly-event-indicator monthly-event-continued"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="4">
+                                    <div class="monthly-day-number">4</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                            </div>
+                            <div class="monthly-week">
+                                <div class="m-d monthly-day monthly-day-event" data-number="5">
+                                    <div class="monthly-day-number">5</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="6">
+                                    <div class="monthly-day-number">6</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="7">
+                                    <div class="monthly-day-number">7</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="8">
+                                    <div class="monthly-day-number">8</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="9">
+                                    <div class="monthly-day-number">9</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="10">
+                                    <div class="monthly-day-number">10</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="2" title="Another Event" style="background:#28cbff;color:#28cbff" class="monthly-event-indicator"><span>Another Event</span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="11">
+                                    <div class="monthly-day-number">11</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                            </div>
+                            <div class="monthly-week">
+                                <div class="m-d monthly-day monthly-day-event" data-number="12">
+                                    <div class="monthly-day-number">12</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="13">
+                                    <div class="monthly-day-number">13</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="14">
+                                    <div class="monthly-day-number">14</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="15">
+                                    <div class="monthly-day-number">15</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="16">
+                                    <div class="monthly-day-number">16</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="17">
+                                    <div class="monthly-day-number">17</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="18">
+                                    <div class="monthly-day-number">18</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                            </div>
+                            <div class="monthly-week">
+                                <div class="m-d monthly-day monthly-day-event" data-number="19">
+                                    <div class="monthly-day-number">19</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event monthly-today" data-number="20">
+                                    <div class="monthly-day-number">20</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="3" title="Another Event" style="background:#9cc370;color:#9cc370" class="monthly-event-indicator"><span>Another Event</span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="21">
+                                    <div class="monthly-day-number">21</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="3" title="Another Event" style="background:#9cc370;color:#9cc370" class="monthly-event-indicator monthly-event-continued"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="22">
+                                    <div class="monthly-day-number">22</div>
+                                    <div class="monthly-indicator-wrap">
+                                        <div data-eventid="3" title="Another Event" style="background:#9cc370;color:#9cc370" class="monthly-event-indicator monthly-event-continued"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="23">
+                                    <div class="monthly-day-number">23</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="24">
+                                    <div class="monthly-day-number">24</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="25">
+                                    <div class="monthly-day-number">25</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                            </div>
+                            <div class="monthly-week">
+                                <div class="m-d monthly-day monthly-day-event" data-number="26">
+                                    <div class="monthly-day-number">26</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="27">
+                                    <div class="monthly-day-number">27</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="28">
+                                    <div class="monthly-day-number">28</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="29">
+                                    <div class="monthly-day-number">29</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day monthly-day-event" data-number="30">
+                                    <div class="monthly-day-number">30</div>
+                                    <div class="monthly-indicator-wrap"></div>
+                                </div>
+                                <div class="m-d monthly-day-blank">
+                                    <div class="monthly-day-number"></div>
+                                </div>
+                                <div class="m-d monthly-day-blank">
+                                    <div class="monthly-day-number"></div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="monthly-event-list">
+                            <div class="monthly-list-item" id="mycalendarday1" data-number="1">
+                                <div class="monthly-event-list-date">Wed<br>1</div>
+                            </div>
+                            <div class="monthly-list-item item-has-event" id="mycalendarday2" data-number="2">
+                                <div class="monthly-event-list-date">Thu<br>2</div><a href="" class="listed-event" data-eventid="1" style="background:#ffb128" title="XML Events">XML Events <div><div class="monthly-list-time-start">12:00 AM</div><div class="monthly-list-time-end">2:00 AM</div></div></a></div>
+                            <div
+                                class="monthly-list-item item-has-event" id="mycalendarday3" data-number="3">
+                                <div class="monthly-event-list-date">Fri<br>3</div><a href="" class="listed-event" data-eventid="1" style="background:#ffb128" title="XML Events">XML Events <div><div class="monthly-list-time-start">12:00 AM</div><div class="monthly-list-time-end">2:00 AM</div></div></a></div>
+                        <div
+                            class="monthly-list-item" id="mycalendarday4" data-number="4">
+                            <div class="monthly-event-list-date">Sat<br>4</div>
+                        </div>
+                    <div class="monthly-list-item" id="mycalendarday5" data-number="5">
+                        <div class="monthly-event-list-date">Sun<br>5</div>
+                    </div>
+                    <div class="monthly-list-item" id="mycalendarday6" data-number="6">
+                        <div class="monthly-event-list-date">Mon<br>6</div>
+                    </div>
+                    <div class="monthly-list-item" id="mycalendarday7" data-number="7">
+                        <div class="monthly-event-list-date">Tue<br>7</div>
+                    </div>
+                    <div class="monthly-list-item" id="mycalendarday8" data-number="8">
+                        <div class="monthly-event-list-date">Wed<br>8</div>
+                    </div>
+                    <div class="monthly-list-item" id="mycalendarday9" data-number="9">
+                        <div class="monthly-event-list-date">Thu<br>9</div>
+                    </div>
+                    <div class="monthly-list-item item-has-event" id="mycalendarday10" data-number="10">
+                        <div class="monthly-event-list-date">Fri<br>10</div><a href="" class="listed-event" data-eventid="2" style="background:#28cbff" title="Another Event">Another Event </a></div>
+                    <div
+                        class="monthly-list-item" id="mycalendarday11" data-number="11">
+                        <div class="monthly-event-list-date">Sat<br>11</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday12" data-number="12">
+                    <div class="monthly-event-list-date">Sun<br>12</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday13" data-number="13">
+                    <div class="monthly-event-list-date">Mon<br>13</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday14" data-number="14">
+                    <div class="monthly-event-list-date">Tue<br>14</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday15" data-number="15">
+                    <div class="monthly-event-list-date">Wed<br>15</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday16" data-number="16">
+                    <div class="monthly-event-list-date">Thu<br>16</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday17" data-number="17">
+                    <div class="monthly-event-list-date">Fri<br>17</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday18" data-number="18">
+                    <div class="monthly-event-list-date">Sat<br>18</div>
+                </div>
+                <div class="monthly-list-item" id="mycalendarday19" data-number="19">
+                    <div class="monthly-event-list-date">Sun<br>19</div>
+                </div>
+                <div class="monthly-list-item monthly-today item-has-event" id="mycalendarday20" data-number="20">
+                    <div class="monthly-event-list-date">Mon<br>20</div><a href="" class="listed-event" data-eventid="3" style="background:#9cc370" title="Another Event">Another Event <div><div class="monthly-list-time-start">9:00 AM</div><div class="monthly-list-time-end">10:00 AM</div></div></a></div>
+                <div
+                    class="monthly-list-item item-has-event" id="mycalendarday21" data-number="21">
+                    <div class="monthly-event-list-date">Tue<br>21</div><a href="" class="listed-event" data-eventid="3" style="background:#9cc370" title="Another Event">Another Event <div><div class="monthly-list-time-start">9:00 AM</div><div class="monthly-list-time-end">10:00 AM</div></div></a></div>
+            <div
+                class="monthly-list-item item-has-event" id="mycalendarday22" data-number="22">
+                <div class="monthly-event-list-date">Wed<br>22</div><a href="" class="listed-event" data-eventid="3" style="background:#9cc370" title="Another Event">Another Event <div><div class="monthly-list-time-start">9:00 AM</div><div class="monthly-list-time-end">10:00 AM</div></div></a></div>
+        <div
+            class="monthly-list-item" id="mycalendarday23" data-number="23">
+            <div class="monthly-event-list-date">Thu<br>23</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday24" data-number="24">
+                <div class="monthly-event-list-date">Fri<br>24</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday25" data-number="25">
+                <div class="monthly-event-list-date">Sat<br>25</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday26" data-number="26">
+                <div class="monthly-event-list-date">Sun<br>26</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday27" data-number="27">
+                <div class="monthly-event-list-date">Mon<br>27</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday28" data-number="28">
+                <div class="monthly-event-list-date">Tue<br>28</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday29" data-number="29">
+                <div class="monthly-event-list-date">Wed<br>29</div>
+            </div>
+            <div class="monthly-list-item" id="mycalendarday30" data-number="30">
+                <div class="monthly-event-list-date">Thu<br>30</div>
+            </div>
+            </div>
+            </div>
+            </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-4 col-md-auto col-lg col-xl-auto">
+                      <label>Audults</label>
+                    </div>
+                    <div class="col-8 col-sm-3 col-lg col-xl">
+                      <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInput">
+                    </div>
+                    <div class="col-4 col-sm-auto col-lg col-md-auto col-xl-auto">
+                      <label>Room Type</label>
+                    </div>
+                    <div class="col-8 col-sm-3 col-lg col-xl">
+                      <div class=" mb-2 mb-sm-0" style="padding-top: 5px;" >
+                        <select id="inputState" class="form-control">
+                          <option></option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col col-sm col-lg col-xl" >
+                      <button type="submit" class="btn btn-bule btn-block">Go</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Cashiering -->
+          <div class="col col-sm col-md col-lg col-xl-6">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Cashiering</h4>
+                <div class="row">
+                  <label class="col-sm-3">Window 1</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control text-cash" placeholder="" value="263.00">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Window 2</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control text-cash" placeholder="" value="230.00">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Window 3</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control text-cash" placeholder="" value="562.00">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Window 4</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control text-cash" placeholder="" value="5.00">
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-3">Payment</label>
+                  <div class="col-10 col-sm-4">
+                    <select id="inputState" class="form-control">
+                      <option selected>Cash</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col-2 col-sm-3">
+                    <img src="../../assets/image/pic_cash.png" class="img-icon">
+                    <!-- <link rel="icon" type="image/x-icon" href="../../assets/image/pic_cash.png"> -->
+                  </div>
+                </div>
+                <!-- <label class="col-6">Balance</label>
+          <label class="col-5"></label> -->
+                <br>
+                <br>
+                <br>
+                <div class="col-6 balance">Balance</div>
+                <div class="col-5"></div>
+                &nbsp; &nbsp;
+                <button type="button" class="btn btn-checked-in col-6">2,532.00</button>
+                <button type="button" class="btn btn-bule col-5 ">Check Out</button>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+        
+      </div>
+    </div>
+  
+</div>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModelDel">
+  button delete
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModelSave">
+    button save
+  </button>
+  <button type="button" class="btn btn-info" routerLink="/modalwizard" >
+    button wizard
+  </button>
+  <!-- <button type="button" id="btnWizard" class="btn btn-info" data-toggle="modal" data-target="#ModelWizard">
+      button wizard
+    </button> -->
+<!-- Modal -->
+
+<div class="modal fade" id="ModelDel" tabindex="-1" role="dialog" aria-labelledby="ModelDelLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog modal-margin-top modal-dialog-alert" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-alert">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        <div class="container">
+        <div class="row" >
+        <div class="col-sm-12 modal-header-imgcenter">
+          <img src="../../assets/image/icon_delete.png"/>
+        </div></div>
+        <div class="" >
+        <div class="col-sm-12 text-center">
+            <span class="text-center font-alert">Are you Sure?</span>
+        </div> </div></div>
+      </div>
+      <div class="modal-body modal-body-padding">
+          <div class="col-sm-12 text-center">
+              <span class="text-center">Do you want to Delete this item?</span>
+          </div>
+      </div>
+      <div class="modal-footer modal-footer-alert">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-6 text-right">
+                  <button type="button" class="btn btn-danger col btn-sm">Delete</button>
+              </div>
+              <div class="col-sm-6">
+                  <button type="button" class="btn btn-secondary col btn-sm" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade" id="ModelSave" tabindex="-1" role="dialog" aria-labelledby="ModelSaveLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-margin-top modal-dialog-alert" role="document">
+        <div class="modal-content">
+          <div class="modal-header modal-header-alert">
+            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button> -->
+            <div class="container">
+            <div class="row" >
+            <div class="col-sm-12 modal-header-imgcenter">
+              <img src="../../assets/image/icon_ok.png"/>
+            </div></div>
+            <div class="" >
+            <div class="col-sm-12 text-center">
+                <span class="text-center font-save">Are you Sure?</span>
+            </div> </div></div>
+          </div>
+          <div class="modal-body modal-body-padding">
+              <div class="col-sm-12 text-center">
+                  <span class="text-center">Do you want to Save this item?</span>
+              </div>
+          </div>
+          <div class="modal-footer modal-footer-alert">
+            <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 text-right">
+                      <button type="button" class="btn btn-primary btn-sm col btn-sm">Save</button>
+                  </div>
+                  <div class="col-sm-6">
+                      <button type="button" class="btn btn-secondary btn-sm col btn-sm" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 
+    <div class="modal fade" id="ModelWizard" tabindex="-1" role="dialog" aria-labelledby="ModelWizardLabel"  aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-trans modal-wizard-width">
+          
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                    <div class="wizard-container">
+                        <div class="card wizard-card" id="wizard">
+                          <div class="">
+                            <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+                                <span class="padClose" aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                          <form action="" method="" novalidate="novalidate">
+                              <div class="wizard-header">
+                                  <h3 class="wizard-title">
+                                    List Your Place
+                                  </h3>
+                      <h5>This information will let us know more about your place.</h5>
+                              </div>
+                    <div class="wizard-navigation">
+                      <ul class="nav nav-pills">
+                                      <li class="active" style="width: 25%;"><a aria-expanded="true" href="#location" data-toggle="tab">Location</a></li>
+                                      <li style="width: 25%;"><a aria-expanded="false" href="#type" data-toggle="tab">Type</a></li>
+                                      <li style="width: 25%;"><a aria-expanded="false" href="#facilities" data-toggle="tab">Facilities</a></li>
+                                      <li style="width: 25%;"><a aria-expanded="false" href="#description" data-toggle="tab">Description</a></li>
+                                  </ul>
+                    <div class="moving-tab" style="transition:transform; width: 187.5px; transform: translate3d(-8px, 0px, 0px);">Location</div></div>
+          
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="location">
+                                      <div class="row">
+                                          <div class="col-sm-12">
+                                              <h4 class="info-text"> Let's start with the basic details</h4>
+                                          </div>
+                                          <div class="col-sm-5 col-sm-offset-1">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">City</label>
+                                                  <input class="form-control" id="exampleInputEmail1" type="text">
+                                              <span class="material-input"></span></div>
+                                          </div>
+                                          <div class="col-sm-5">
+                                              <div class="form-group label-floating is-empty">
+                                                    <label class="control-label">Country</label>
+                                                    <select name="country" class="form-control">
+                                                        <option disabled="" selected=""></option>
+                                                        <option value="Afghanistan"> Afghanistan </option>
+                                                        <option value="Albania"> Albania </option>
+                                                        <option value="Algeria"> Algeria </option>
+                                                        <option value="American Samoa"> American Samoa </option>
+                                                        <option value="Andorra"> Andorra </option>
+                                                        <option value="Angola"> Angola </option>
+                                                        <option value="Anguilla"> Anguilla </option>
+                                                        <option value="Antarctica"> Antarctica </option>
+                                                        <option value="...">...</option>
+                                                    </select>
+                                                <span class="material-input"></span></div>
+                                          </div>
+                                          <div class="col-sm-5 col-sm-offset-1">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Accommodates</label>
+                                                  <select class="form-control">
+                                                      <option disabled="" selected=""></option>
+                                                      <option>1 Person</option>
+                                                      <option>2 Persons </option>
+                                                      <option>3 Persons</option>
+                                                      <option>4 Persons</option>
+                                                      <option>5 Persons</option>
+                                                      <option>6+ Persons</option>
+                                                  </select>
+                                              <span class="material-input"></span></div>
+                                          </div>
+                                          <div class="col-sm-5">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Rent price</label>
+                                                  <div class="input-group">
+                                                      <input class="form-control" type="text">
+                                                      <span class="input-group-addon">$</span>
+                                                  </div>
+                                              <span class="material-input"></span></div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="tab-pane" id="type">
+                                        <h4 class="info-text">What type of location do you have? </h4>
+                                        <div class="row">
+                                            <div class="col-sm-10 col-sm-offset-1">
+                                                <div class="col-sm-4 col-sm-offset-2">
+                                                    <div title="" class="choice" data-original-title="Select this option if you have a house." data-toggle="wizard-radio" rel="tooltip">
+                                                        <input name="type" type="radio" value="House">
+                                                        <div class="icon">
+                                                            <i class="material-icons">home</i>
+                                                        </div>
+                                                        <h6>House</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div title="" class="choice" data-original-title="Select this option if you have an appartment" data-toggle="wizard-radio" rel="tooltip">
+                                                        <input name="type" type="radio" value="Appartment">
+                                                        <div class="icon">
+                                                            <i class="material-icons">hotel</i>
+                                                        </div>
+                                                        <h6>Appartment</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="facilities">
+                                        <h4 class="info-text">Tell us more about facilities. </h4>
+                                        <div class="row">
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Your place is good for</label>
+                                                  <select class="form-control">
+                                                      <option disabled="" selected=""></option>
+                                                      <option>Business</option>
+                                                      <option>Vacation </option>
+                                                      <option>Work</option>
+                                                  </select>
+                                              <span class="material-input"></span></div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Is air conditioning included ?</label>
+                                                  <select class="form-control">
+                                                      <option disabled="" selected=""></option>
+                                                      <option>Yes</option>
+                                                      <option>No </option>
+                                                  </select>
+                                              <span class="material-input"></span></div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Does your place have wi-fi?</label>
+                                                  <select class="form-control">
+                                                  <option disabled="" selected=""></option>
+                                                      <option>Yes</option>
+                                                      <option>No </option>
+                                                  </select>
+                                              <span class="material-input"></span></div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                              <div class="form-group label-floating is-empty">
+                                                  <label class="control-label">Is breakfast included?</label>
+                                                  <select class="form-control">
+                                                      <option disabled="" selected=""></option>
+                                                      <option>Yes</option>
+                                                      <option>No </option>
+                                                  </select>
+                                              <span class="material-input"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="description">
+                                        <div class="row">
+                                            <h4 class="info-text"> Drop us a small description. </h4>
+                                            <div class="col-sm-6 col-sm-offset-1">
+                                                <div class="form-group label-floating is-empty">
+                                                    <label class="control-label">Place description</label>
+                                                    <textarea class="form-control" placeholder="" rows="9"></textarea>
+                                                <span class="material-input"></span></div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                              <div class="form-group label-floating">
+                                                    <label class="control-label">Example</label>
+                                                    <p class="description">"The place is really nice. We use it every sunday when we go fishing. It is so awesome."</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+                                          <input name="next" class="btn btn-next btn-fill btn-primary btn-wd" type="button" value="Next"><div class="ripple-container"><div class="ripple ripple-on ripple-out" style="left: 786px; top: 418px; transform: scale(17.5); background-color: rgb(255, 255, 255);"></div></div>
+                                          <input name="finish" class="btn btn-finish btn-fill btn-primary btn-wd" style="display: none;" type="button" value="Finish">
+                                      </div>
+                                      <div class="pull-left">
+                                          <input name="previous" class="btn btn-previous btn-gray btn-fill btn-default btn-wd disabled" type="button" value="Previous"><div class="ripple-container"><div class="ripple ripple-on ripple-out" style="left: 374px; top: 436px; transform: scale(17.5); background-color: rgb(255, 255, 255);"></div><div class="ripple ripple-on ripple-out" style="left: 374px; top: 439px; transform: scale(17.5); background-color: rgb(255, 255, 255);"></div></div>
+                                      </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                          </form>
+                        </div>
+                    </div> 
+              </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    
+    

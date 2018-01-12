@@ -1,0 +1,218 @@
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <a href="" [routerLink]="['/']">
+        <img src="../../assets/images_backend/logo_PMS_manager.png" class="img-icon">
+      </a>
+      <!-- <h5>PMS.Manager 1.0</h5> -->
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="text-uppercase search" placeholder="SEARCH">
+      <span class="input-group-addon icon-search">
+        <img src="../../assets/images_backend/i_search.png" alt="" class="icon-backend">
+      </span>
+    </div>
+
+    <ul class="list-unstyled">
+      <!-- <li class="active"> -->
+      <li>
+        <a href="#masterSubmenu" class="text-uppercase" data-toggle="collapse" aria-expanded="false">
+          <img src="../../assets/images_backend/i_master.png" alt="" class="icon-backend">master
+        </a>
+        <ul class="collapse list-unstyled" id="masterSubmenu">
+          <li>
+            <a href="#masterDataSubmenu" data-toggle="collapse" aria-expanded="false">
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Data</a>
+            <ul class="collapse list-unstyled" id="masterDataSubmenu">
+              <li>
+                <a class="submenu" href="" [routerLink]="['/property-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Property</a>
+              </li>
+              <li>
+                <a class="submenu" href="" routerLink="/brand-list">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Brand</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-type-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master RoomType</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/roomtype-property-link-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Property RoomType</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Room</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-wing-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Wing</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-building-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Building</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-bed-type-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master BedType</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-class-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Room Class</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-type-group-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master RoomTypeGroup</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-floor-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Floor</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-zone-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master RoomZone</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-room-features-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master RoomFeatures</a>
+              </li>
+              <li>
+                <a class="submenu" href="" [routerLink]="['/mst-exposure-list']">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Master Exposure</a>
+              </li>
+              
+              <!-- <li>
+                <a class="submenu">
+                  <span class="fa fa-angle-double-right icon-backend" aria-hidden="true"></span>Shit Group</a>
+              </li> -->
+              <!-- <li>
+                <a class="submenu" href="#docorSubmenu" data-toggle="collapse" aria-expanded="false">
+                  <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Docor</a>
+                <ul class="collapse list-unstyled" id="docorSubmenu">
+                  <li>
+                    <a class="subsubmenu">
+                      <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Decor Type</a>
+                  </li>
+                  <li>
+                    <a class="subsubmenu">
+                      <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Decor Status Type</a>
+                  </li>
+                  <li>
+                    <a class="subsubmenu">
+                      <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Decor</a>
+                  </li>
+                  <li>
+                    <a class="subsubmenu">
+                      <span class="fa fa-caret-right icon-backend" aria-hidden="true"></span>Decor</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_condiment.png" alt="" class="icon-backend">condiment</a>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_nonitem.png" alt="" class="icon-backend">nonitem</a>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_product.png" alt="" class="icon-backend">product</a>
+      </li>
+      <li>
+        <a href="#menuSubmenu" class="text-uppercase" data-toggle="collapse" aria-expanded="false">
+          <img src="../../assets/images_backend/i_menu.png" alt="" class="icon-backend">menu</a>
+        <ul class="collapse list-unstyled" id="menuSubmenu">
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Menu 1</a>
+          </li>
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Menu 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_payment.png" alt="" class="icon-backend">payment</a>
+      </li>
+      <li>
+        <a href="#printerSubmenu" class="text-uppercase" data-toggle="collapse" aria-expanded="false">
+          <img src="../../assets/images_backend/i_printer.png" alt="" class="icon-backend">printer</a>
+        <ul class="collapse list-unstyled" id="printerSubmenu">
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Printer 1</a>
+          </li>
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Printer 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_employee.png" alt="" class="icon-backend">employee</a>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_promotion.png" alt="" class="icon-backend">promotion</a>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_setup.png" alt="" class="icon-backend">setup</a>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_security.png" alt="" class="icon-backend">security</a>
+      </li>
+      <li>
+        <a href="#interfaceSubmenu" class="text-uppercase" data-toggle="collapse" aria-expanded="false">
+          <img src="../../assets/images_backend/i_interface.png" alt="" class="icon-backend">interface</a>
+        <ul class="collapse list-unstyled" id="interfaceSubmenu">
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Interface 1</a>
+          </li>
+          <li>
+            <a>
+              <span class="fa fa-chevron-right icon-backend" aria-hidden="true"></span>Interface 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="text-uppercase">
+          <img src="../../assets/images_backend/i_report.png" alt="" class="icon-backend">Report</a>
+      </li>
+      <li>
+        <a href="" class="text-uppercase" (click)="btnSignOut();">
+          <img src="../../assets/images_backend/i_security.png" alt="" class="icon-backend">SignOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+
+    <!-- d-block d-md-none -->
+    <nav class="navbar navbar-light d-block d-md-none" style="height: 52px;">
+      <span id="sidebarCollapse" class=" oi oi-menu"></span>
+    </nav>
+
+    <!-- <div class="d-block d-md-none">
+      <button type="button" id="sidebarCollapse" class="btn"> -->
+    <!-- <img src="../../assets/image/i_hamberger.png" alt="" > -->
+    <!-- </button>
+    </div> -->
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

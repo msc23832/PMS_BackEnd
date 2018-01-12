@@ -1,0 +1,76 @@
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <label class="Tile" *ngIf="mode === 'EDIT'">Property RoomType : {{ propNorooms }}</label>
+        <label class="Tile" *ngIf="mode === 'ADD'">Property RoomType</label>
+      </div>
+      <div class="card-body pl-0 pr-0">
+        <div class="col">
+          <form class="form-1">
+            <div class="form-group row">
+              <label for="PropCode" class="col-md-3 col-xl-2 col-form-label">Property</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="PropCode" name="PropCode" class="form-control" [(ngModel)]="propCode" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let prop of _dataproperty" value="{{ prop.code_property }}">{{ prop.name_property }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="MstRoomType" class="col-md-3 col-xl-2 col-form-label">RoomType</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="MstRoomType" name="MstRoomType" class="form-control" [(ngModel)]="propRoomType" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let roomtype of _dataroomtype" value="{{ roomtype.code_roomtype }}">{{ roomtype.name_roomtype }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="MstBedType" class="col-md-3 col-xl-2 col-form-label">BedType</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="MstBedType" name="MstBedType" class="form-control" [(ngModel)]="propBedType" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let bedtype of _databedtype" value="{{ bedtype.code_bedtype }}">{{ bedtype.name_bedtype }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="MstBuilding" class="col-md-3 col-xl-2 col-form-label">Building</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="MstBuilding" name="MstBuilding" class="form-control" [(ngModel)]="propBuilding" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let building of _databuilding" value="{{ building.code_building }}">{{ building.name_building }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="MstWing" class="col-md-3 col-xl-2 col-form-label">"Wing"</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                <select id="MstWing" name="MstWing" class="form-control" [(ngModel)]="propWing" required>
+                  <option disabled selected value="0">Choose...</option>
+                  <option *ngFor="let wing of _datawing" value="{{ wing.code_wing }}">{{ wing.name_wing }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="PropNoRooms" class="col-md-3 col-xl-2 col-form-label">no_rooms</label>
+              <div class="col-sm col-md-8 col-lg-4">
+                  <input type="number" class="form-control" id="PropNoRooms" name="PropNoRooms" [(ngModel)]="propNorooms" required>
+              </div>
+            </div>
+          </form>
+          <br>
+          <form class="form-inline justify-content-end">
+            <button type="submit" (click)="btnSave()" class="btn btn-add">Save</button>
+            <!-- <button type="submit" class="btn btn-checked-out col col-md-2 col-xl-1">Delete</button> -->
+            <button type="button" (click)="btnCancel()" class="btn btn-delete">Cancel</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
