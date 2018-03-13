@@ -12,7 +12,7 @@ export class LoginService {
   constructor(private router: Router, private http: Http) { }
 
   canActivate() {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('PMSToken')) {
       return true;
     } else {
       this.router.navigate(['login']);

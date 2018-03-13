@@ -1,50 +1,50 @@
 <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: 'true' }"></ngx-loading>
 
-<div class="row">
+<div class="container-fluid">
   <!-- Left -->
   <div class="col-12">
     <!-- Search -->
-    <div class="card">
-      <div class="card-header">
-        <label class="Tile">Brand</label>
-        <br>
-        <label class="Sub-Tile">{{ date }}</label>
-      </div>
-      <div class="card-body table-responsive">
-        <table class="table table-sm table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Brand Code</th>
-              <th scope="col">Brand Name</th>
-              <th scope="col">Active</th>
-              <th scope="col">Brand_License</th>
-              <th scope="col">Brand_Validate</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let data of _data">
-              <td>{{data.code_brand}}</td>
-              <td>{{data.name_brand}}</td>
-              <td>{{data.active}}</td>
-              <td>{{data.brand_license}}</td>
-              <td>{{data.brand_validate | date: 'dd-MM-yyyy'}}</td>
-              <td>
-                <a (click)="btnEdit(data.id_brand);">
-                  <i class="oi oi-pencil"> </i>
-                </a>
-                <a (click)="sendDelete(data.id_brand);"  data-toggle="modal" data-target="#ModelDel" >
-                  <span class="oi oi-trash text-danger"></span>
-                </a>
-              </td>
-
-              
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
+    <!-- <div class="card"> -->
+    <div class="page-header">
+      <label class="Tile">Brand</label>
+      <br>
+      <label class="Sub-Tile">{{ date }}</label>
     </div>
+    <div class="page-body table-responsive">
+      <table class="table table-sm table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Brand Code</th>
+            <th scope="col">Brand Name</th>
+            <th scope="col">Active</th>
+            <th scope="col">Brand_License</th>
+            <th scope="col">Brand_Validate</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of _data">
+            <td>{{data.code_brand}}</td>
+            <td>{{data.name_brand}}</td>
+            <td>{{data.active}}</td>
+            <td>{{data.brand_license}}</td>
+            <td>{{data.brand_validate | date: 'dd-MM-yyyy'}}</td>
+            <td>
+              <a (click)="btnEdit(data.id_brand);">
+                <i class="oi oi-pencil"> </i>
+              </a>
+              <a (click)="sendDelete(data.id_brand);" data-toggle="modal" data-target="#ModelDel">
+                <span class="oi oi-trash text-danger"></span>
+              </a>
+            </td>
+
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <!-- </div> -->
   </div>
 </div>
 
@@ -55,7 +55,8 @@
 </nav>
 
 
-<div class="modal fade" id="ModelDel" tabindex="-1" role="dialog" aria-labelledby="ModelDelLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+<div class="modal fade" id="ModelDel" tabindex="-1" role="dialog" aria-labelledby="ModelDelLabel" aria-hidden="true" data-keyboard="false"
+  data-backdrop="static">
   <div class="modal-dialog modal-margin-top modal-dialog-alert" role="document">
     <div class="modal-content">
       <div class="modal-header modal-header-alert">
@@ -64,29 +65,32 @@
           <span aria-hidden="true">&times;</span>
         </button> -->
         <div class="container">
-        <div class="row" >
-        <div class="col-sm-12 modal-header-imgcenter">
-          <img src="../../assets/image/icon_delete.png"/>
-        </div></div>
-        <div class="" >
-        <div class="col-sm-12 text-center">
-            <span class="text-center font-alert">Are you Sure?</span>
-        </div> </div></div>
+          <div class="row">
+            <div class="col-sm-12 modal-header-imgcenter">
+              <img src="../../assets/image/icon_delete.png" />
+            </div>
+          </div>
+          <div class="">
+            <div class="col-sm-12 text-center">
+              <span class="text-center font-alert">Are you Sure?</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-body modal-body-padding">
-          <div class="col-sm-12 text-center">
-              <span class="text-center">Do you want to Delete this item?</span>
-          </div>
+        <div class="col-sm-12 text-center">
+          <span class="text-center">Do you want to Delete this item?</span>
+        </div>
       </div>
       <div class="modal-footer modal-footer-alert">
         <div class="container">
           <div class="row">
-              <div class="col-sm-6 text-right">
-                  <button type="button" (click)="btnDelete(DeleteID);" class="btn btn-danger col btn-sm" data-dismiss="modal">Delete</button>
-              </div>
-              <div class="col-sm-6">
-                  <button type="button" class="btn btn-secondary col btn-sm" data-dismiss="modal">Close</button>
-              </div>
+            <div class="col-sm-6 text-right">
+              <button type="button" (click)="btnDelete(DeleteID);" class="btn btn-danger col btn-sm" data-dismiss="modal">Delete</button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-secondary col btn-sm" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>

@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       this.loginService.doLogin(this.login).subscribe((res) => {
         console.log(res);
         if (res.id) {
-          localStorage.setItem('token', res.id);
+          localStorage.setItem('PMSToken', res.id);
           this.router.navigate(['property-list']);
         } else {
 

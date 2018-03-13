@@ -11,6 +11,13 @@ export class BrandService {
   constructor(private http: Http) {
 
   }
+  getReport(): Observable<any> {
+    return this.http.get(`http://localhost:5488/api/report`)
+      .map((res: Response) => {
+        return res.json();
+      })
+      .catch((error: any) => Observable.throw(error));
+  }
 
   getData(): Observable<any> {
     return this.http.get(`${environment.apiUrl}/api/brands/getBrand`)
